@@ -27,4 +27,6 @@ def index():
         translated = GoogleTranslator(source=source, target=target).translate(ttt)
         print(translated)
         return render_template('tr.html',translated=translated)
-app.run(port=8000,debug=True)
+
+if __name__ == "__main__":
+    app.run(host = "0.0.0.0",debug=True)
